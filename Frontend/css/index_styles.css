@@ -1,0 +1,75 @@
+body {
+    background-color: #c0e6fb;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#hotwheelsBackground {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.card {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContents {
+    height: 450px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.loginButton {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #78C1F3;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border-width: 0px;
+    border-radius: 15px;
+}
+
+#hotwheelsLogo {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: transparent;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+input {
+    padding: 0px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.forgetPassword {
+    font-size: 12px;
+    text-align: right;
+    padding-left: 80px;
+}
+
+.accountCreation {
+    padding: 0;
+    font-size: 12px;
+}
+
