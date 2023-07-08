@@ -42,3 +42,56 @@ body {
     padding: 20px 100px;
     width: 100%;
 }
+
+.slideCards {
+    overflow: hidden;
+}
+
+.slideCards figure {
+    position: relative;
+    width: 500%;
+    animation: 20s slider infinite linear;
+}
+
+@keyframes slider {
+    0% { 
+        left: 0;
+    }
+    15% { 
+        left: 0;
+    }
+    20% {
+        left: -100%;
+    }
+    35% {
+        left: -100%
+    }
+    40% {
+        left: -200%;
+    }
+    55% {
+        left: -200%;
+    }
+    60% {
+        left: -300%;
+    }
+    75% {
+        left: -300%;
+    }
+    80% {
+        left: -400%;
+    }
+    95% {
+        left: -400%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+
+.slideCards   img {
+    height: auto;
+    width: 20%;
+    float: left;
+}
