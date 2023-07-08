@@ -31,24 +31,13 @@ body {
 }
 
 .cardContents {
-    height: 450px;
-    width: 400px;
+    height: 600px;
+    width: 420px;
     padding: 10px;
     background-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
     opacity: .9;
-}
-
-.loginButton {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background-color: #78C1F3;
-    color: white;
-    padding: 10px;
-    font-size: 25px;
-    border-width: 0px;
-    border-radius: 15px;
 }
 
 p {
@@ -65,21 +54,25 @@ input {
     text-align: left;
     border: none;
     border-bottom: 1px solid black;
-    width: 300px;
+    width: 320px;
     height: 40px;
     background-color: whitesmoke;
     font-size: 20px;
 }
 
-.forgetPassword {
-    font-size: 12px;
-    text-align: right;
-    margin: 0px;
-    padding-left: 170px;
+
+.loginRedirect {
+    padding: 0;
     font-size: 18px;
 }
 
-.accountCreation {
-    padding: 0;
-    font-size: 18px;
+.signUpButton {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #78C1F3;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    border-width: 0px;
+    border-radius: 15px;
 }
