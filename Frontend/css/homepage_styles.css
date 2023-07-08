@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: 80%;
     height: 100px;
     background-color: #45CFDD;
     padding: 20px 100px;
@@ -37,14 +37,18 @@ body {
 .header_button {
     padding-top: 22px;
 }
-
+.body {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+}
 .body img {
-    padding: 20px 100px;
-    width: 100%;
+    width: 70%;
 }
 
 .slideCards {
     overflow: hidden;
+    margin: 100px 500px;
 }
 
 .slideCards figure {
@@ -90,7 +94,7 @@ body {
 }
 
 
-.slideCards   img {
+.slideCards img {
     height: auto;
     width: 20%;
     float: left;
