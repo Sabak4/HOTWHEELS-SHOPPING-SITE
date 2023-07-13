@@ -19,12 +19,14 @@ body {
 .cart {
     margin-left: auto;
 }
+
 .cart img {
     height: auto;
     width: 100px;
     margin-left: auto;
     padding-right: 50px;
 }
+
 .hotwheelsLogo img {
     width: 200px;
     height: auto;
@@ -64,10 +66,25 @@ body {
 
 /* Modifying the Button of the grids*/
 
+
+.remove_from_cart {
+    display: inline;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    border-width: 0px;
+    border-radius: 15px;
+    background-color: #FF6666;
+    color: white;
+}
+
 .add_to_cart {
     /* This small part is used to make the button at the middle of the div*/
+    /*
     display: block;
     margin: 0 auto;
+    */
+    float: right;
     margin-top: 10px;
     padding: 10px;
     font-size: 15px;
