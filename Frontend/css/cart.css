@@ -45,3 +45,10 @@ body {
 .header_button {
     padding-top: 22px;
 }
+
+/* body of the cart */
+
+.cart_flex_container {
+    display: flex;
+    gap: 20px;
+}
