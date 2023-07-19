@@ -18,9 +18,9 @@ document.querySelector(".sportsHotwheelsRedirect").addEventListener("click", fun
 })
 
 // Redirect from the Sports Hotwheels to the Truck Hotwheels Page
-document.querySelector(".truckHotwheelsRedirect").addEventListener("click", function(event) {
+document.querySelector(".motorcycleHotwheelsRedirect").addEventListener("click", function(event) {
     event.preventDefault();
-    window.location.href = "truck_hotwheels_page.html";
+    window.location.href = "motorcycle_hotwheels_page.html";
 })
 
 // Redirect from the Sports Hotwheels to the Batmobile Hotwheels Page
