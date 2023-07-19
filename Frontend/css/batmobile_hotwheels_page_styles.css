@@ -24,6 +24,7 @@ body {
     width: 100px;
     margin-left: auto;
     padding-right: 50px;
+    cursor: pointer !important;
 }
 .hotwheelsLogo img {
     width: 200px;
@@ -38,6 +39,7 @@ body {
     border-radius: 10px;
     color: white;
     font-size: 30px;
+    cursor: pointer !important;
 }
 
 .header_button {

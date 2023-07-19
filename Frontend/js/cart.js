@@ -45,18 +45,19 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
     if (valueSession > 0) {
 
-
         var imageURL = "../images/classic_cars/" + keySession + ".jpg";
         htmlcode = htmlcode + `
+        <div class="cart_body_items">
         <div class="cart_body_image">
             <img src="${imageURL}" alt="${keySession}" >
         </div>
         <div class="cart_body_button">
-            <Button class="remove_quantity_button ${keySession}">Remove</BUtton>
-            <Button class="add_quantity_button ${keySession}">Add</Button>
+            <Button class="remove_quantity_button ${keySession}">-</BUtton>
+            <Button class="add_quantity_button ${keySession}">+</Button>
         </div>
         <div class="cart_body_quantity ${keySession}">
             ${valueSession}
+        </div>
         </div>`;
     }
 }

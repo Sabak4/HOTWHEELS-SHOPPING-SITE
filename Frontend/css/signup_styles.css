@@ -75,4 +75,5 @@ input {
     font-size: 25px;
     border-width: 0px;
     border-radius: 15px;
+    cursor: pointer;
 }

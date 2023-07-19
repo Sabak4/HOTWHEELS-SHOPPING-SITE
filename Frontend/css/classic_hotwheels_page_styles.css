@@ -25,6 +25,7 @@ body {
     width: 100px;
     margin-left: auto;
     padding-right: 50px;
+    cursor: pointer !important;
 }
 
 .hotwheelsLogo img {
@@ -40,6 +41,7 @@ body {
     border-radius: 10px;
     color: white;
     font-size: 30px;
+    cursor: pointer !important;
 }
 
 .header_button {
@@ -76,6 +78,7 @@ body {
     border-radius: 15px;
     background-color: #FF6666;
     color: white;
+    cursor: pointer !important;
 }
 
 .add_to_cart {
@@ -92,4 +95,5 @@ body {
     border-radius: 15px;
     background-color: #FF6666;
     color: white;
+    cursor: pointer !important;
 }

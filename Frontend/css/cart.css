@@ -48,7 +48,54 @@ body {
 
 /* body of the cart */
 
+/*
+<div class="cart_flex_container">
+<div class="cart_body_items">
+        <div class="cart_body_image">
+            <img src="${imageURL}" alt="${keySession}" >
+        </div>
+        <div class="cart_body_button">
+            <Button class="remove_quantity_button ${keySession}">-</BUtton>
+            <Button class="add_quantity_button ${keySession}">+</Button>
+        </div>
+        <div class="cart_body_quantity ${keySession}">
+            ${valueSession}
+        </div>
+        </div>
+        </div>
+*/
+.cartBody {
+    margin: 50px 0px;
+}
+
 .cart_flex_container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
+
+.cart_body_items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cart_body_image img {
+    height: 160px;
+    width: 330px;
+    border-radius: 20px;
+}
+
+.cart_body_button Button {
+    width: 50px;
+    height: 50px;
+    background-color: #78C1F3;
+    color: white;
+    border-width: 0px;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
