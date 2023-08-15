@@ -42,24 +42,29 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
     var keySession = sessionStorage.key(i);
     var valueSession = sessionStorage.getItem(keySession);
-    var locationFolder="";
-    if(keySession.includes('Pontiac_Firebird_67_400') || keySession.includes('Shelby_67_GT500_2010') || keySession.includes('Toyota_Celica_70_Green_2013') || keySession.includes('Dodge_Charger_71') || keySession.includes('ElCamino_71') || keySession.includes('Fort_Falcon_73_XB') || keySession.includes('DeLorean_81_DMC') || keySession.includes('Honda_90_Civic')) {
+    var locationFolder = "";
+    if (keySession.includes('Pontiac_Firebird_67_400') || keySession.includes('Shelby_67_GT500_2010') || keySession.includes('Toyota_Celica_70_Green_2013') || keySession.includes('Dodge_Charger_71') || keySession.includes('ElCamino_71') || keySession.includes('Fort_Falcon_73_XB') || keySession.includes('DeLorean_81_DMC') || keySession.includes('Honda_90_Civic')) {
         locationFolder = "classic_cars";
-    } else if(keySession.includes('BMW_E36_M3_Race') || keySession.includes('Bugatti_Chiron_Blue_16') || keySession.includes('Bugatti_Veyron') || keySession.includes('Lamborghini_Countach') || keySession.includes('Porshe_935') || keySession.includes('RRRoadsteer') || keySession.includes('SRT_Viper_GTS_R') || keySession.includes('Super_Blitzen_Green')) {
+    } else if (keySession.includes('BMW_E36_M3_Race') || keySession.includes('Bugatti_Chiron_Blue_16') || keySession.includes('Bugatti_Veyron') || keySession.includes('Lamborghini_Countach') || keySession.includes('Porshe_935') || keySession.includes('RRRoadsteer') || keySession.includes('SRT_Viper_GTS_R') || keySession.includes('Super_Blitzen_Green')) {
         locationFolder = "sports_car";
-    } else if(keySession.includes('Kawasaki_Ninja_GPZ_900R') || keySession.includes('Honda_CB750_Cafe') || keySession.includes('Harley_Davidson_Fat_Boy_2012') || keySession.includes('Ducati_Diavel_2013') || keySession.includes('Ducati_DesertX') || keySession.includes('Ducati_1199_Panigale') || keySession.includes('Deadpool_Scooter') || keySession.includes('Batpod_2008')) {
+    } else if (keySession.includes('Kawasaki_Ninja_GPZ_900R') || keySession.includes('Honda_CB750_Cafe') || keySession.includes('Harley_Davidson_Fat_Boy_2012') || keySession.includes('Ducati_Diavel_2013') || keySession.includes('Ducati_DesertX') || keySession.includes('Ducati_1199_Panigale') || keySession.includes('Deadpool_Scooter') || keySession.includes('Batpod_2008')) {
         locationFolder = "motorcycles";
-    } else if(keySession.includes('Batmobile_1966_Tv_Series') || keySession.includes('Batmobile_Arkham_Knight_2015') || keySession.includes('Batmobile_Batman_Forever') || keySession.includes('Batmobile_Batman_The_Animated_Series') || keySession.includes('Batmobile_Batman_v_Superman') || keySession.includes('Batmobile_Justice_League_2018') || keySession.includes('Batmobile_The_Batman') || keySession.includes('Batmobile_The_Dark_Knight')) {
+    } else if (keySession.includes('Batmobile_1966_Tv_Series') || keySession.includes('Batmobile_Arkham_Knight_2015') || keySession.includes('Batmobile_Batman_Forever') || keySession.includes('Batmobile_Batman_The_Animated_Series') || keySession.includes('Batmobile_Batman_v_Superman') || keySession.includes('Batmobile_Justice_League_2018') || keySession.includes('Batmobile_The_Batman') || keySession.includes('Batmobile_The_Dark_Knight')) {
         locationFolder = "batmobile";
     }
 
     if (valueSession > 0) {
 
-        var imageURL = "../images/" + locationFolder + "/" + keySession + ".jpg";
+        var imageURL = "images/" + locationFolder + "/" + keySession + ".jpg";
+        console.log("The image URL is : " + imageURL);
+        var imageName = keySession.replace(/_/g, ' ');
+        console.log("The Image name URL is : " + imageName);
+        // Here we are setting the image name which is going to be associated with each key n the sessionManager
         htmlcode = htmlcode + `
         <div class="cart_body_items">
         <div class="cart_body_image">
             <img src="${imageURL}" alt="${keySession}" >
+            <p>${imageName}</p>
         </div>
         <div class="cart_body_button">
             <Button class="remove_quantity_button ${keySession}">-</BUtton>

@@ -99,3 +99,7 @@ body {
     cursor: pointer;
 }
 
+/* Here we are making the Image name Centre middle of the Image */
+.cart_body_image p {
+    text-align: center;
+}
