@@ -1,8 +1,11 @@
 package hotwheels.loginpage.controller;
 
 import hotwheels.loginpage.entitiy.HotwheelsUsersDataBaseEntity;
+import hotwheels.loginpage.entitiy.UsernameAndPasswordPOJO;
 import hotwheels.loginpage.repository.HotwheelsUsersDataBaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,18 +18,31 @@ public class LoginPageController {
     private HotwheelsUsersDataBaseRepository repository;
 
     // We are making a get call to the DataBase to get the username
-    // Use the Following URL : "http://localhost:8085/login-page/getUser?username=sbasak&password=sbasak"
-    @GetMapping("/login-page/getUser")
-    public HotwheelsUsersDataBaseEntity getUser(@RequestParam(name = "username",required = true) String username,
-                                                 @RequestParam(name = "password",required = true) String password) {
+    // Use the Following URL : "http://localhost:8085/login-page/getUser"
+    // the json
+    /*
+    {
+    "username": "sbasak",
+    "password": "sbasak"
+    }
+    */
+    @PostMapping("/login-page/getUser")
+    @CrossOrigin
+    public ResponseEntity<HotwheelsUsersDataBaseEntity>  getUser(@RequestBody UsernameAndPasswordPOJO userPassword) {
+        System.out.println(userPassword);
+        String username = userPassword.getUsername();
+        String password = userPassword.getPassword();
         Optional<HotwheelsUsersDataBaseEntity> usernameByID = repository.findById(username);
         if(usernameByID.isPresent()) {
-            if(usernameByID.get().getPassword().equals(password))
-                return usernameByID.get();
+            if(usernameByID.get().getPassword().equals(password)) {
+                System.out.println("the username and password matches");
+                return ResponseEntity.ok(usernameByID.get()) ;
+            }
+
             else
-                return null;
+                return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
         }
-        return null;
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
     public HotwheelsUsersDataBaseEntity getOnlyUser(String username) {
@@ -51,13 +67,16 @@ public class LoginPageController {
     }
     */
     @PostMapping("/signup-page/addUser")
-    public HotwheelsUsersDataBaseEntity addUser(@RequestBody HotwheelsUsersDataBaseEntity newUser) {
+    @CrossOrigin
+    public ResponseEntity<HotwheelsUsersDataBaseEntity>  addUser(@RequestBody HotwheelsUsersDataBaseEntity newUser) {
+        System.out.println("The call is made to ADD user to the database");
         HotwheelsUsersDataBaseEntity user = getOnlyUser(newUser.getUsername());
         if(user ==null) {
-            return repository.save(newUser);
+            System.out.println("User Sucessfully Added : ");
+            return ResponseEntity.ok(repository.save(newUser)) ;
 
         }
-        return null;
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
     }
 
     // Get all the users
