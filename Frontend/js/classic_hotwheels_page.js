@@ -265,3 +265,13 @@ document.querySelector(".remove_from_cart.Honda_90_Civic").addEventListener("cli
     sessionStorage.setItem('Honda_90_Civic', count);
     console.log("Honda_90_Civic : Count = " + count);
 })
+
+// Here we are showing the username to the user and we are getting the username from the sessionManager
+document.querySelector(".usernameButton").innerHTML = sessionStorage.getItem("username");
+
+// logout of the user when username button is clicked and also send the user to the login page
+document.querySelector(".usernameButton").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "../index.html";
+
+})

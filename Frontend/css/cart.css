@@ -15,7 +15,11 @@ body {
     display: flex;
     gap: 10px;
 }
-
+.usernameButton {
+    background-color: red !important;
+    margin-left: 220px;
+    cursor: pointer !important;
+}
 .cart {
     margin-left: auto;
 }

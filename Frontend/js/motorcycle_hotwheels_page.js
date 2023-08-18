@@ -265,3 +265,13 @@ document.querySelector(".remove_from_cart.Batpod_2008").addEventListener("click"
     sessionStorage.setItem('Batpod_2008', count);
     console.log("Batpod_2008 : Count = " + count);
 })
+
+// Here we are showing the username to the user and we are getting the username from the sessionManager
+document.querySelector(".usernameButton").innerHTML = sessionStorage.getItem("username");
+
+// logout of the user when username button is clicked and also send the user to the login page
+document.querySelector(".usernameButton").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "../index.html";
+
+})
