@@ -23,7 +23,7 @@ document.querySelector(".loginButton").addEventListener("click", async function 
     };
 
     try {
-        const response = await fetch("http://localhost:8085/login-page/getUser", {
+        const response = await fetch("/login-page/getUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -33,7 +33,7 @@ document.querySelector(".loginButton").addEventListener("click", async function 
 
         console.log("The response is : ", response);
         if (response.ok) {
-            const responseData = response.json();
+            const responseData = await response.json();
             console.log("Response:", responseData);
             sessionStorage.setItem("username", username.value);
             console.log(sessionStorage.getItem("username"));

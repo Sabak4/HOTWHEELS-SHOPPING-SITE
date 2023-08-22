@@ -37,7 +37,7 @@ document.querySelector(".signUpButton").addEventListener("click", async function
     // Here we are making a post call to add users to the database
     // For now we are hardcoding the url
     try {
-        const response = await fetch("http://localhost:8085/signup-page/addUser", {
+        const response = await fetch("/signup-page/addUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +47,7 @@ document.querySelector(".signUpButton").addEventListener("click", async function
 
         console.log("The response is : ", response);
         if (response.ok) {
-            const responseData = response.json();
+            const responseData = await response.json();
             console.log("Response:", responseData);
             // window.location.href = "homepage.html";
         } else {
