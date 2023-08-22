@@ -33,6 +33,7 @@ document.querySelector(".signUpButton").addEventListener("click", async function
         "date_of_birth": `${dateOfBirth.value}`
     };
 
+    console.log("The json we are sending to the backend is : " , requestData);
     // Here we are making a post call to add users to the database
     // For now we are hardcoding the url
     try {

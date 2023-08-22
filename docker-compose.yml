@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  hotwheels-backend-login-page:
+    image: "sabak4/hotwheels-backend-login-page:0.0.1"
+    restart: always
+    ports:
+      - 8085:8085
+    depends_on:
+      - mysqldb
+  mysqldb:
+    image: "mysql"
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: hotwheels_database
+      MYSQL_USER: sabak
+      MYSQL_PASSWORD: sabak
+      MYSQL_ROOT_PASSWORD: sabak
+  hotwheels-frontend:
+    image: "sabak4/hotwheels-frontend:0.0.2"
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - mysqldb
+      - hotwheels-backend-login-page
