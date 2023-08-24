@@ -1,4 +1,4 @@
-package hotwheels.loginpage.entitiy;
+package com.hotwheels.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

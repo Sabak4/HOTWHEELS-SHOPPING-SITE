@@ -1,6 +1,7 @@
-package hotwheels.loginpage.repository;
+package com.hotwheels.repository;
 
-import hotwheels.loginpage.entitiy.HotwheelsUsersDataBaseEntity;
+
+import com.hotwheels.entity.HotwheelsUsersDataBaseEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HotwheelsUsersDataBaseRepository extends JpaRepository<HotwheelsUsersDataBaseEntity,String> {

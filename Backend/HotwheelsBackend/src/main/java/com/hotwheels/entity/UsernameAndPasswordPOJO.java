@@ -1,4 +1,4 @@
-package hotwheels.loginpage.entitiy;
+package com.hotwheels.entity;
 
 public class UsernameAndPasswordPOJO {
 

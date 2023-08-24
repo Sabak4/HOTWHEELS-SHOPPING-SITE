@@ -1,8 +1,9 @@
-package hotwheels.loginpage.controller;
+package com.hotwheels.controller;
 
-import hotwheels.loginpage.entitiy.HotwheelsUsersDataBaseEntity;
-import hotwheels.loginpage.entitiy.UsernameAndPasswordPOJO;
-import hotwheels.loginpage.repository.HotwheelsUsersDataBaseRepository;
+
+import com.hotwheels.entity.HotwheelsUsersDataBaseEntity;
+import com.hotwheels.entity.UsernameAndPasswordPOJO;
+import com.hotwheels.repository.HotwheelsUsersDataBaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
