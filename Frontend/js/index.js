@@ -1,5 +1,6 @@
 const username = document.querySelector("#userNameInput");
 const password = document.querySelector("#passwordInput");
+const awsUrl = "http://hotwheels-backend.ap-south-1.elasticbeanstalk.com/";
 
 // If the user doesn't have an account clicking on it will take to the sign up page
 document.querySelector(".accountCreation").addEventListener("click", function (event) {
@@ -22,8 +23,11 @@ document.querySelector(".loginButton").addEventListener("click", async function 
         "password": `${password.value}`
     };
 
+    const completeUrl = awsUrl+"login-page/getUser";
+    console.log("The complete URL is : " + completeUrl);
+
     try {
-        const response = await fetch("/login-page/getUser", {
+        const response = await fetch(completeUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

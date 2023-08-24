@@ -3,6 +3,7 @@ const lastName = document.querySelector("#inputLastName");
 const userName = document.querySelector("#inputUsername");
 const dateOfBirth = document.querySelector("#inputDateOfBirth");
 const password = document.querySelector("#inputPassword");
+const awsUrl = "http://hotwheels-backend.ap-south-1.elasticbeanstalk.com/";
 
 // This will redirect to the index.html page when an click is registered
 document.querySelector(".loginRedirect").addEventListener("click", function (event) {
@@ -33,11 +34,14 @@ document.querySelector(".signUpButton").addEventListener("click", async function
         "date_of_birth": `${dateOfBirth.value}`
     };
 
+    const completeUrl = awsUrl+"signup-page/addUser";
+    console.log("The complete URL is : " + completeUrl);
+
     console.log("The json we are sending to the backend is : " , requestData);
     // Here we are making a post call to add users to the database
     // For now we are hardcoding the url
     try {
-        const response = await fetch("/signup-page/addUser", {
+        const response = await fetch(completeUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
