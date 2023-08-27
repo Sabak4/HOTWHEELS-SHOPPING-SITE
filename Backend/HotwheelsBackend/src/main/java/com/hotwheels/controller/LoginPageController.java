@@ -19,7 +19,7 @@ public class LoginPageController {
     private HotwheelsUsersDataBaseRepository repository;
 
     // We are making a get call to the DataBase to get the username
-    // Use the Following URL : "http://localhost:8085/login-page/getUser"
+    // Use the Following URL : "http://localhost:5000/login-page/getUser"
     // the json
     /*
     {
@@ -56,7 +56,7 @@ public class LoginPageController {
 
     // We are adding a new user
     // we are also checking if the user is already present if it is present then we are not adding it
-    // Use the Following URL : "http://localhost:8085/signup-page/addUser"
+    // Use the Following URL : "http://localhost:5000/signup-page/addUser"
     // the json
     /*
     {
@@ -81,7 +81,7 @@ public class LoginPageController {
     }
 
     // Get all the users
-    // Use the Following URL : "http://localhost:8085/login-page/getAllUsers"
+    // Use the Following URL : "http://localhost:5000/login-page/getAllUsers"
     @GetMapping("/login-page/getAllUsers")
     public List<HotwheelsUsersDataBaseEntity> getAllUsers() {
         return repository.findAll();

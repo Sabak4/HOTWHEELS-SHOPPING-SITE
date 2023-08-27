@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "hotwheels_users")
+@Table(name = "user_database")
 public class HotwheelsUsersDataBaseEntity {
 
     @Id
